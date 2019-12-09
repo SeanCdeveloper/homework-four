@@ -1,0 +1,48 @@
+ /* Nav-Element Modification */
+ nav ul {
+    list-style-type: none;
+}
+
+nav li {
+    display: inline;
+}
+
+#highScoreLink {
+    float: left;
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+    color: darkred;
+}
+
+#timerDisplay {
+    padding-left: 50%;
+}
+/* Non-Nav-Element Modification */
+
+.content {
+    border: 1px solid black;
+}
+
+h1 {
+    text-align: center;
+}
+
+p {
+    text-align: center;
+    margin: 0 5% 0 5%;
+}
+
+.startQuiz {
+    margin-left: 30%;
+    margin-top: 3em;
+    background: darkred;
+    width: 10em;
+    height: 2em;
+    border-radius: 5%;
+    color: white;
+    margin-bottom: 50px;
+    font-size: 14pt;
+}
