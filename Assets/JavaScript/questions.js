@@ -1,5 +1,5 @@
 var questions = 
-[{title: "Which CSS Style Rule will make an Element disappear?", choices: ["display: disappear;", "display: block;", "display: none;", "visible: false;"], answer: "display: none;" }, 
+[{title: "Which CSS Style Rule will make an Element disappear?", choices: ["display: disappear;", "display: block;", "display: none;", "invisible: true;"], answer: "display: none;" }, 
 {title: "Which of the following is not a 'Global Object'?", choices: ["Array", "String", "Window", "textContent()"], answer: "textContent()"}, 
 {title:"Which of the following is not a JavaScript Event?", choices: ["hover", "click", "change", "modify"], answer: "modify"}, 
 {title: "What is the jQuery Method that relates to textContent() Property?", choices: ["innerHTML()", "text()", "attr()", ".on()"], answer: "text()"}, 
@@ -10,14 +10,20 @@ var questions =
 {title: "If the statement 'var value = 2' occurs inside a function, what type of variable does it declare?", choices: ["A global variable", "A local variable", "A constant variable"], answer: "local variable"}, 
 {title: "Which of the following operators mean 'not equal to'", choices: ["&&", "!==", "===", "=="], answer: "!=="},];
 
+$("#choices-ol").on("click", function(event) {
+  $(this).css({"background-color": "skyblue"});
+  console.log(event.target.parentElement.textContent);
+});
 
+
+/*
 console.log(questions[1].title);
 
 // Looping through an Array of Objects
 for (i=0; i<questions.length; i++) {
     console.log(questions[i].title + " && " + questions[i].choices);
 }
-
+*/
 
 
 /* .title is the Property for Questions being asked */

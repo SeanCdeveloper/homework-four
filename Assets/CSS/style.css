@@ -39,6 +39,12 @@ p {
     margin: 0 5% 0 5%;
 }
 
+#title-p {
+    font-weight: bold;
+}
+
+
+
 .startQuiz {
     margin-left: 30%;
     margin-top: 3em;

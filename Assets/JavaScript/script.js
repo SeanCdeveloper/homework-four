@@ -1,9 +1,5 @@
-console.log("hello");
-
 var timeEl = document.querySelector(".time-remaining");
 var buttonEl = document.querySelector(".startQuiz");
-console.log(timeEl);
-console.log(buttonEl);
 
 $(buttonEl).on("click", function() {
     setTime();
