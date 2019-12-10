@@ -22,8 +22,12 @@ a {
 }
 /* Non-Nav-Element Modification */
 
-.content {
-    border: 1px solid black;
+.content1 {
+    display: block;
+}
+
+.content2 {
+  display: none;
 }
 
 h1 {
@@ -46,3 +50,4 @@ p {
     margin-bottom: 50px;
     font-size: 14pt;
 }
+

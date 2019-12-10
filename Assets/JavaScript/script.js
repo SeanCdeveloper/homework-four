@@ -7,9 +7,10 @@ console.log(buttonEl);
 
 $(buttonEl).on("click", function() {
     setTime();
+    hideContent1();
 });
 
-var secondsLeft = 100;
+var secondsLeft = 150;
 
 function setTime() {
     var timerInterval = setInterval(function() {
@@ -25,3 +26,12 @@ function setTime() {
 function sendMessage() {
     timeEl.textContent="";
 }
+
+var content1 = document.querySelector(".content1");
+var content2 = document.querySelector(".content2");
+
+function hideContent1() {
+    content1.style.display = "none";
+    content2.style.display = "block";
+}
+
