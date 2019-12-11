@@ -34,7 +34,6 @@ var correctAnswer = alert("Increment Score");
 } else {
 var incorrectAnswer = alert("Decrement Score");
 }
-
 switchToNextQuestion();
 });
 
