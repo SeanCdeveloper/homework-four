@@ -35,21 +35,25 @@ var correctAnswer = alert("Correct");
 var incorrectAnswer = alert("Incorrect: 15 seconds will be subtracted from Timer.");
 secondsLeft = secondsLeft - 15;
 }
-/*New Stuff, below***/
-if (pTag.textContent[i] !== undefined) {
+/*
+if (pTag.textContent[i] !== null) {
 switchToNextQuestion();
 } else {
-  console.log("switch");
+  ;
 }
 });
-
+*/
 function switchToNextQuestion() {
-i++;
-pTag.textContent = questions[i].title;
-liTag0.textContent = questions[i].choices[0];
-liTag1.textContent = questions[i].choices[1];
-liTag2.textContent = questions[i].choices[2];
-liTag3.textContent = questions[i].choices[3]; 
+  i++;
+  if(i === questions.length){
+    content3.style.display = "block";
+  } else {
+    pTag.textContent = questions[i].title;
+    liTag0.textContent = questions[i].choices[0];
+    liTag1.textContent = questions[i].choices[1];
+    liTag2.textContent = questions[i].choices[2];
+    liTag3.textContent = questions[i].choices[3]; 
+  }
 }
 
 

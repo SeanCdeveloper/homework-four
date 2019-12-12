@@ -5,8 +5,6 @@ var content2 = document.querySelector(".content2");
 var content3 = document.querySelector('.content3');
 var highScoresLink = document.querySelector("#highScoreLink");
 
-
-
 $(buttonEl).on("click", function (event) {
     setTime();
     hideContent1();
