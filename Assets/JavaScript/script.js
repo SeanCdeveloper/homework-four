@@ -1,7 +1,13 @@
 var timeEl = document.querySelector(".time-remaining");
 var buttonEl = document.querySelector(".startQuiz");
+var content1 = document.querySelector(".content1");
+var content2 = document.querySelector(".content2");
+var content3 = document.querySelector('.content3');
+var highScoresLink = document.querySelector("#highScoreLink");
 
-$(buttonEl).on("click", function () {
+
+
+$(buttonEl).on("click", function (event) {
     setTime();
     hideContent1();
 });
@@ -12,7 +18,7 @@ function setTime() {
     var timerInterval = setInterval(function () {
         secondsLeft--;
         timeEl.textContent = secondsLeft;
-        if (secondsLeft === 0) {
+        if (secondsLeft <= 0) {
             clearInterval(timerInterval);
             sendMessage();
         }
@@ -21,18 +27,18 @@ function setTime() {
 
 function sendMessage() {
     timeEl.textContent = "";
-    alert("Time has run out!");
+    var noTimeLeft = alert("Time has run out!"); 
+    content2.style.display = "none";
+    content3.style.display = "block";
 }
-
-var content1 = document.querySelector(".content1");
-var content2 = document.querySelector(".content2");
 
 function hideContent1() {
     content1.style.display = "none";
     content2.style.display = "block";
+    content3.style.display = "none";
 }
 
-/* Code for Getting and Setting HighScores with "highScores.html" */
+/* localStorage Section */
 
 /* Initializing the "input#initialsInput" Object */
 var initialsInput = document.querySelector("#initialsInput");
@@ -66,14 +72,16 @@ function displayMessage(type, message) {
 function renderLastRegistered() {
     var initials = localStorage.getItem("initials");
     var score = localStorage.getItem("score");
-console.log(score);
+
     if (initials && endingScore === null) {
         return;
     }
-    highScore1Span.textContent
+    /*
+    highScore1Span.append("")
     highScore2Span.textContent 
     highScore3Span.textContent 
     highScore4Span.textContent 
+    */
 }
 
 /* Setting up the "button#submitButton" to create Form Submission */
@@ -104,42 +112,4 @@ submitButton.addEventListener("click", function(event) {
 
 
 
-/*
-/* creating user Object from submission From Example 23 */
-/*
-var user = {
-    initials: initialsInput.value.trim(),
-    /* I'm using "var secondsLeft", initiall set at 50 and decremented after startButton "click" Event 
-    score: secondsLeft
-
-};
-*/
-
-
-
-
-
-
-
-/* Code For highScores.html, below */
-
-/* Counter needs to decrement 15 seconds when someone clicks the wrong answer */
-/*
-var counter = $(".time-remaining");
-counter.textContent = secondsLeft;
-console.log(counter);
-var count = localStorage.getItem("count");
-console.log(count);
-counter.textContent = count;
-
-if (event.target.parentElement.textContent !== questions[i].answer) {
-    count - 15;
-}
-/*
-
-/*
-var currentEndingScore = secondsLeft;
-console.log(currentEndingScore);
-$("#currentEndingScore").text(currentEndingScore);
-*/
 
