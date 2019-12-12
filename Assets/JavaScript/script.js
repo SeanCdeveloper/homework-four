@@ -8,7 +8,6 @@ $(buttonEl).on("click", function () {
 
 // below was "var secondsLeft = 150" but has changed only to make modification simplified.  
 var secondsLeft = 150;
-
 function setTime() {
     var timerInterval = setInterval(function () {
         secondsLeft--;
@@ -32,6 +31,13 @@ function hideContent1() {
     content1.style.display = "none";
     content2.style.display = "block";
 }
+
+
+
+
+
+
+
 
 /* Code for Getting and Setting HighScores with "highScores.html" */
 
