@@ -32,13 +32,6 @@ function hideContent1() {
     content2.style.display = "block";
 }
 
-
-
-
-
-
-
-
 /* Code for Getting and Setting HighScores with "highScores.html" */
 
 /* Initializing the "input#initialsInput" Object */
@@ -52,9 +45,20 @@ var highScore2Span = document.querySelector("#highScore2");
 var highScore3Span = document.querySelector("#highScore3");
 var highScore4Span = document.querySelector("#highScore4");
 
+console.log(highScore1Span);
+console.log(highScore2Span);
+console.log(highScore3Span);
+console.log(highScore4Span);
 
+// This is the first function Call for "function renderLastRegistered()".
 renderLastRegistered();
 
+/*
+function displayMessage(type, message) {
+    msgDiv.textContent = message;
+    msgDiv.setAttribute("class", type);
+  }
+*/
 /* Initializing function renderLastRegistered() {...}; */
 
 // Getting the High Scores
@@ -62,7 +66,7 @@ renderLastRegistered();
 function renderLastRegistered() {
     var initials = localStorage.getItem("initials");
     var score = localStorage.getItem("score");
-
+console.log(score);
     if (initials && endingScore === null) {
         return;
     }
@@ -80,9 +84,10 @@ submitButton.addEventListener("click", function(event) {
     console.log(event.target);
     var initials = document.querySelector("#initialsInput").value;
     console.log(initials);
+    
     var endingScore = secondsLeft;
     console.log(endingScore);
-
+    
     // Validating User Input 
     if (initialsInput === "") {
         displayMessage("error", "You must enter your initials.");
@@ -92,8 +97,9 @@ submitButton.addEventListener("click", function(event) {
 
     // Setting the Local Storage
     localStorage.setItem("initials", initials);
-    localStorage.setItem("score", endingScore);
+    localStorage.setItem("score", secondsLeft);
 });
+
 
 
 

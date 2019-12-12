@@ -32,7 +32,7 @@ console.log(event.target.getAttribute("id"));
 if (event.target.parentElement.textContent === questions[i].answer) {
 var correctAnswer = alert("Correct");
 } else {
-var incorrectAnswer = alert("Incorrect");
+var incorrectAnswer = alert("Incorrect: 15 seconds will be subtracted from Timer.");
 secondsLeft = secondsLeft - 15;
 }
 switchToNextQuestion();
