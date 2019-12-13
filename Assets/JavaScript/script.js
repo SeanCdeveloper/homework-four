@@ -10,7 +10,6 @@ $(buttonEl).on("click", function (event) {
     hideContent1();
 });
 
-// below was "var secondsLeft = 150" but has changed only to make modification simplified.  
 var secondsLeft = 150;
 function setTime() {
     var timerInterval = setInterval(function () {
@@ -57,16 +56,6 @@ console.log(highScore4Span);
 // This is the first function Call for "function renderLastRegistered()".
 renderLastRegistered();
 
-/*
-function displayMessage(type, message) {
-    msgDiv.textContent = message;
-    msgDiv.setAttribute("class", type);
-  }
-*/
-/* Initializing function renderLastRegistered() {...}; */
-
-// Getting the High Scores
-
 function renderLastRegistered() {
     var initials = localStorage.getItem("initials");
     var score = localStorage.getItem("score");
@@ -74,21 +63,7 @@ function renderLastRegistered() {
     if (initials && endingScore === null) {
         return;
     }
-    /*
-    highScore1Span.append("")
-    highScore2Span.textContent 
-    highScore3Span.textContent 
-    highScore4Span.textContent 
-    */
-}
-
-
-// Save high scores as Scores = [];
-//Put another highScore into the Array
-// Use the values of the Array and put them in the screen. 
-
-/* Setting up the "button#submitButton" to create Form Submission */
-
+    
 /* "click" Event */
 submitButton.addEventListener("click", function(event) {
     event.preventDefault();
@@ -110,10 +85,4 @@ submitButton.addEventListener("click", function(event) {
     localStorage.setItem("initials", initials);
     localStorage.setItem("score", secondsLeft);
 });
-
-// Put the high Score in localStorage
-
-
-
-
-
+}

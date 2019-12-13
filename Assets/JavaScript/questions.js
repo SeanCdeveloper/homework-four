@@ -37,14 +37,7 @@ $("#choices-ol").on("click", function(event) {
   }
   switchToNextQuestion();
 });
-/*
-if (pTag.textContent[i] !== null) {
-switchToNextQuestion();
-} else {
-  ;
-}
-});
-*/
+
 function switchToNextQuestion() {
   i++;
   if(i === questions.length){
