@@ -48,18 +48,12 @@ var highScore2Span = document.querySelector("#highScore2");
 var highScore3Span = document.querySelector("#highScore3");
 var highScore4Span = document.querySelector("#highScore4");
 
-console.log(highScore1Span);
-console.log(highScore2Span);
-console.log(highScore3Span);
-console.log(highScore4Span);
-
 // This is the first function Call for "function renderLastRegistered()".
 renderLastRegistered();
 
 function renderLastRegistered() {
     var initials = localStorage.getItem("initials");
     var score = localStorage.getItem("score");
-
     if (initials && endingScore === null) {
         return;
     }
@@ -71,6 +65,7 @@ submitButton.addEventListener("click", function(event) {
     var initials = document.querySelector("#initialsInput").value;
     console.log(initials);
     
+    //?
     var endingScore = secondsLeft;
     console.log(endingScore);
     
@@ -82,7 +77,8 @@ submitButton.addEventListener("click", function(event) {
     }
 
     // Setting the Local Storage
-    localStorage.setItem("initials", initials);
+    localStorage.setItem("initials", initials);    
     localStorage.setItem("score", secondsLeft);
 });
 }
+
