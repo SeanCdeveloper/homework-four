@@ -82,6 +82,11 @@ function renderLastRegistered() {
     */
 }
 
+
+// Save high scores as Scores = [];
+//Put another highScore into the Array
+// Use the values of the Array and put them in the screen. 
+
 /* Setting up the "button#submitButton" to create Form Submission */
 
 /* "click" Event */
@@ -106,6 +111,7 @@ submitButton.addEventListener("click", function(event) {
     localStorage.setItem("score", secondsLeft);
 });
 
+// Put the high Score in localStorage
 
 
 

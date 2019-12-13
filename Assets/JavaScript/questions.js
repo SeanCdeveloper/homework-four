@@ -26,15 +26,17 @@ liTag3.textContent = questions[0].choices[3];
 var i = 0;
 
 $("#choices-ol").on("click", function(event) {
-event.preventDefault();
-console.log(event.target.parentElement.textContent);
-console.log(event.target.getAttribute("id"));
-if (event.target.parentElement.textContent === questions[i].answer) {
-var correctAnswer = alert("Correct");
-} else {
-var incorrectAnswer = alert("Incorrect: 15 seconds will be subtracted from Timer.");
-secondsLeft = secondsLeft - 15;
-}
+  event.preventDefault();
+  console.log(event.target.parentElement.textContent);
+  console.log(event.target.getAttribute("id"));
+  if (event.target.parentElement.textContent === questions[i].answer) {
+    var correctAnswer = alert("Correct");
+  } else {
+    var incorrectAnswer = alert("Incorrect: 15 seconds will be subtracted from Timer.");
+    secondsLeft = secondsLeft - 15;
+  }
+  switchToNextQuestion();
+});
 /*
 if (pTag.textContent[i] !== null) {
 switchToNextQuestion();
@@ -46,8 +48,9 @@ switchToNextQuestion();
 function switchToNextQuestion() {
   i++;
   if(i === questions.length){
+    content2.style.display = "none";
     content3.style.display = "block";
-  } else {
+  } else {    
     pTag.textContent = questions[i].title;
     liTag0.textContent = questions[i].choices[0];
     liTag1.textContent = questions[i].choices[1];
@@ -55,6 +58,7 @@ function switchToNextQuestion() {
     liTag3.textContent = questions[i].choices[3]; 
   }
 }
+
 
 
 
